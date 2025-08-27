@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -47,6 +48,12 @@ public class PlayerController : MonoBehaviour
     {
         Look();
         Move();
+
+        // Quit to main menu
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu"); // Replace "MainMenu" with your scene name
+        }
     }
 
     void Look()
