@@ -9,6 +9,11 @@ public class MainMenuSceneManager : MonoBehaviour
         Cursor.visible = true;
     }
 
+    public void StartLevelZero()
+    {
+        SceneManager.LoadScene("LevelZero");
+    }
+
     public void StartLevelOne()
     {
         SceneManager.LoadScene("LevelOne");
